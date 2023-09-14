@@ -1,0 +1,28 @@
+{
+  "name": "librenms Dev",
+  "context": "..",
+  "dockerFile": "Dockerfile",
+  "containerEnv": {
+    "DEVCONTAINER": "1"
+  },
+  "runArgs": [
+    "-e",
+    "GIT_EDITOR=code --wait"
+  ],
+  "postCreateCommand": "scripts/composer_wrapper.php install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug"
+      ],
+      "settings": {
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

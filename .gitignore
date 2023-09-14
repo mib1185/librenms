@@ -10,6 +10,7 @@
 !/.codeclimate.yml
 !/.mention-bot
 !/.env.example
+!/.devcontainer
 
 # Others #
 ##########
